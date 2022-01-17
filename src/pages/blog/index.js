@@ -1,9 +1,8 @@
 import * as React from 'react';
-import Layout from '../layout';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Link, graphql } from 'gatsby';
+import Layout from '../layout';
 
-const blogPage = ({ data }) => {
+const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle="My Blog Posts">
       {data.allMdx.nodes.map((node) => (
@@ -27,10 +26,10 @@ export const query = graphql`
           title
         }
         id
-        body
+        slug
       }
     }
   }
 `;
 
-export default blogPage;
+export default BlogPage;
