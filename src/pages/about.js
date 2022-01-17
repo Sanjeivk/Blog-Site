@@ -1,11 +1,13 @@
 import * as React from 'react';
+import { Link } from 'gatsby';
+import Layout from './layout';
 
-const about = () => {
+const AboutPage = ({ children }) => {
   return (
-    <div>
-      <h1>This is the about page</h1>
-    </div>
+    <Layout pageTitle="About Me">
+      <p>This is the about me page of the Gatsby website!</p>
+    </Layout>
   );
 };
 
-export default about;
+export default AboutPage;
